@@ -20,7 +20,10 @@ for (i=0; i<256; i++) {
     element.setAttribute("class", "square");
     element.setAttribute("style", `height: ${640/16}px`)
     element.addEventListener("mouseover", () => {
-        element.style.background = "black";
+        const COLOR_RED = Math.floor(Math.random()*256);
+        const COLOR_GREEN = Math.floor(Math.random()*256);
+        const COLOR_BLUE = Math.floor(Math.random()*256);
+        element.style.background = `rgb(${COLOR_RED}, ${COLOR_GREEN}, ${COLOR_BLUE})`;
     });
     
     container.appendChild(element);
@@ -38,7 +41,10 @@ button.addEventListener("click", function gridSize() {
         element.setAttribute("class", "square");
         element.setAttribute("style", `height: ${640/userInput}px`)
         element.addEventListener("mouseover", () => {
-            element.style.background = "black";
+            const COLOR_RED = Math.floor(Math.random()*256);
+            const COLOR_GREEN = Math.floor(Math.random()*256);
+            const COLOR_BLUE = Math.floor(Math.random()*256);
+            element.style.background = `rgb(${COLOR_RED}, ${COLOR_GREEN}, ${COLOR_BLUE})`;
         });
         
         container.appendChild(element);
