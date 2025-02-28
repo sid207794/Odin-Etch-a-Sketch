@@ -17,7 +17,6 @@ body {
 #container .square {
     flex: auto;
     aspect-ratio: 1/1;
-    height: 40px;
     border: solid, 1px, red;
     box-sizing: border-box;
 }
