@@ -18,12 +18,21 @@ const container = document.querySelector("#container");
 for (i=0; i<256; i++) {
     const element = document.createElement("div");
     element.setAttribute("class", "square");
-    element.setAttribute("style", `height: ${640/16}px`)
+    element.setAttribute("style", `height: ${640/16}px`);
+
+    let j = 100;
     element.addEventListener("mouseover", () => {
         const COLOR_RED = Math.floor(Math.random()*256);
         const COLOR_GREEN = Math.floor(Math.random()*256);
         const COLOR_BLUE = Math.floor(Math.random()*256);
         element.style.background = `rgb(${COLOR_RED}, ${COLOR_GREEN}, ${COLOR_BLUE})`;
+        
+        if (j <= 0) {
+            element.style.filter = `brightness(0%)`;
+        } else {
+            element.style.filter = `brightness(${j}%)`;
+            j -= 10;
+        }
     });
     
     container.appendChild(element);
@@ -39,12 +48,21 @@ button.addEventListener("click", function gridSize() {
     for (i=0; i<Math.pow(userInput, 2); i++) {
         const element = document.createElement("div");
         element.setAttribute("class", "square");
-        element.setAttribute("style", `height: ${640/userInput}px`)
+        element.setAttribute("style", `height: ${640/userInput}px`);
+
+        let j = 100;
         element.addEventListener("mouseover", () => {
             const COLOR_RED = Math.floor(Math.random()*256);
             const COLOR_GREEN = Math.floor(Math.random()*256);
             const COLOR_BLUE = Math.floor(Math.random()*256);
             element.style.background = `rgb(${COLOR_RED}, ${COLOR_GREEN}, ${COLOR_BLUE})`;
+            
+            if (j <= 0) {
+                element.style.filter = `brightness(0%)`;
+            } else {
+                element.style.filter = `brightness(${j}%)`;
+                j -= 10;
+            }
         });
         
         container.appendChild(element);
