@@ -9,7 +9,7 @@ body {
 #container {
     display: flex;
     flex-wrap: wrap;
-    border: solid, 1px, black;
+    border: solid, 2px, white;
     height: 640px;
     width: 640px;
 }
@@ -17,6 +17,5 @@ body {
 #container .square {
     flex: auto;
     aspect-ratio: 1/1;
-    border: solid, 1px, red;
     box-sizing: border-box;
 }
